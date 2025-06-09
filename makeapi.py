@@ -64,7 +64,7 @@ app = FastAPI(
 
 @app.post("/solve-captcha/", 
           response_model=dict, 
-          summary="Solve a CAPTCHA image",
+          summary="SOLVE a CAPTCHA image",
           description="Upload a CAPTCHA image to extract and recognize its letters")
 async def solve_captcha(file: UploadFile = File(...)):
     """
@@ -150,4 +150,4 @@ numpy
 matplotlib
 """
 
-# Run with: uvicorn main:app --reload
+# Run with: uvicorn makeapi:app --reload
